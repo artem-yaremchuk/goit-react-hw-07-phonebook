@@ -10,8 +10,7 @@ const Filter = () => {
 
   return (
     <div className={css.filterForm}>
-      <label htmlFor="inputFilter" className={css.filterLabel}>
-        Find contacts by name:
+      <label htmlFor="inputFilter" className={css.filterLabel}>Find contacts by name:</label>
         <input
           type="text"
           className={css.filterInput}
@@ -19,7 +18,6 @@ const Filter = () => {
           onChange={handleChange}
           placeholder="Search..."
         />
-      </label>
     </div>
   );
 };

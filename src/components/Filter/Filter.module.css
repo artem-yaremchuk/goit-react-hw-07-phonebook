@@ -1,21 +1,75 @@
 .filterForm {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.filterForm:hover,
+.filterForm:focus {
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(46, 47, 66, 0.1), 0px 2px 4px rgba(46, 47, 66, 0.08);
 }
 
 .filterLabel {
+    font-size: 18px;
     font-weight: 500;
-    color: #434455;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
 }
 
 .filterInput {
-    margin-left: 20px;
-    border: 1px solid #d9dbde;
-    border-radius: 10px;
-    padding: 5px 10px;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 16px;
+    padding-right: 16px;
+    outline: transparent;
+    transition: border-color var(--transition);
 }
 
-.filterInput:hover,
 .filterInput:focus {
-    border: 1px solid #959595;
+    border-color: var(--input-focus);
+}
+
+.filterInput::placeholder {
+    font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .filterForm {
+        width: 400px;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .filterLabel {
+        font-size: 16px;
+    }
+
+    .filterInput {
+        width: 50%;
+        height: 30px;
+    }
+    
+    .filterInput::placeholder {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .filterForm {
+        width: 360px;
+    }
+
+    .filterInput {
+        width: 40%;
+    }
 }

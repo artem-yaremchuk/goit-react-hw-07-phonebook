@@ -4,6 +4,8 @@ import { addContact } from "../../redux/operations";
 import { selectItems } from "../../redux/selectors";
 import Notiflix from "notiflix";
 import css from "./ContactForm.module.css";
+import { ReactComponent as UserLogo } from "../../images/user.svg";
+import { ReactComponent as PhoneLogo } from "../../images/phone.svg";
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -45,38 +47,44 @@ const ContactForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={css.form}>
-      <div className={css.formField}>
+      <div className={css.formFieldName}>
         <label htmlFor="exampleInputName" className={css.formLabel}>
           Name
         </label>
-        <input
-          type="text"
-          name="name"
-          className={css.formInput}
-          id="exampleInputName"
-          value={data.name}
-          onChange={handleChange}
-          required
-        />
+        <div className={css.inputWrap}>
+          <input
+            type="text"
+            name="name"
+            className={css.formInput}
+            id="exampleInputName"
+            value={data.name}
+            onChange={handleChange}
+            required
+          />
+          <UserLogo className={css.formInputIcon} />
+        </div>
       </div>
-      <div className={css.formField}>
+      <div className={css.formFieldPhone}>
         <label htmlFor="exampleInputNumber" className={css.formLabel}>
-          Number
+          Phone
         </label>
-        <input
-          type="tel"
-          name="phone"
-          className={css.formInput}
-          id="exampleInputNumber"
-          value={data.phone}
-          onChange={handleChange}
-          required
-        />
+        <div className={css.inputWrap}>
+          <input
+            type="tel"
+            name="phone"
+            className={css.formInput}
+            id="exampleInputNumber"
+            value={data.phone}
+            onChange={handleChange}
+            required
+          />
+          <PhoneLogo className={css.formInputIcon} />
+        </div>
       </div>
       <button type="submit" className={css.formBtn}>
         Add contact
       </button>
-    </form>
+      </form>
   );
 };
 

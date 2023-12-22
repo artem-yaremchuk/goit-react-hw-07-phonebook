@@ -8,11 +8,11 @@ const ContactList = () => {
   const contacts = useSelector(selectFilteredContacts);
 
   return (
-    <ul className={css.contactsList}>
-      {contacts.map((el) => (
-        <ContactListItem key={el.id} contact={el} />
-      ))}
-    </ul>
+      <ul className={css.contactsList}>
+        {contacts.map((el) => (
+          <ContactListItem key={el.id} contact={el} />
+        ))}
+      </ul>
   );
 };
 

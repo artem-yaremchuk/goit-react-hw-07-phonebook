@@ -26,12 +26,13 @@ const App = () => {
     <div>
       <h1
         style={{
-          fontWeight: 500,
-          lineHeight: "1.5",
+          fontSize: 36,
+          fontWeight: 600,
+          lineHeight: "1.1",
           textAlign: "center",
           letterSpacing: "0.02em",
           color: "#2E2F42",
-          marginBottom: 20,
+          marginBottom: 10,
           marginTop: 20,
         }}
       >
@@ -41,12 +42,13 @@ const App = () => {
 
       <h2
         style={{
+          fontSize: 32,
           fontWeight: 500,
           lineHeight: "1.5",
           textAlign: "center",
           letterSpacing: "0.02em",
           color: "#2E2F42",
-          marginBottom: 20,
+          marginBottom: 10,
           marginTop: 20,
         }}
       >
